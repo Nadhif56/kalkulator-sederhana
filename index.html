@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 1 - Luas & Keliling Persegi Panjang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Glow Background Effects -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <main class="container">
+    <div class="calculator-card">
+      <header class="card-header">
+        <span class="badge">Tugas 1 • JavaScript</span>
+        <h1>Luas & Keliling Persegi Panjang</h1>
+        <p class="subtitle">Hitung luas dan keliling persegi panjang secara dinamis dan interaktif</p>
+      </header>
+
+      <!-- Input Form Interaktif -->
+      <section class="input-section">
+        <div class="input-grid">
+          <div class="input-group">
+            <label for="input-panjang">Panjang (p):</label>
+            <div class="input-wrapper">
+              <input type="number" id="input-panjang" value="10" min="0" step="any" placeholder="Masukkan panjang">
+              <span class="unit-badge">meter</span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="input-lebar">Lebar (l):</label>
+            <div class="input-wrapper">
+              <input type="number" id="input-lebar" value="5" min="0" step="any" placeholder="Masukkan lebar">
+              <span class="unit-badge">meter</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button type="button" id="btn-hitung" class="btn btn-primary">
+            <span>Hitung sekarang</span>
+          </button>
+          <button type="button" id="btn-reset" class="btn btn-secondary">
+            <span>Reset nilai</span>
+          </button>
+        </div>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- Visualisasi Persegi Panjang Interaktif -->
+      <section class="preview-section">
+        <div class="preview-header">
+          <span>Visualisasi Bentuk Persegi Panjang</span>
+        </div>
+        <div class="preview-container">
+          <div id="rect-visual" class="rectangle">
+            <span id="rect-label">10 m × 5 m</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hasil Output Sesuai ID Tugas Asli -->
+      <section class="results-grid">
+        <div class="result-card">
+          <span class="result-title">Panjang</span>
+          <h2 class="result-value">
+            <span id="panjang">10</span> <span class="unit">m</span>
+          </h2>
+        </div>
+
+        <div class="result-card">
+          <span class="result-title">Lebar</span>
+          <h2 class="result-value">
+            <span id="lebar">5</span> <span class="unit">m</span>
+          </h2>
+        </div>
+
+        <div class="result-card card-luas">
+          <span class="result-title">Luas (p × l)</span>
+          <h2 class="result-value">
+            <span id="luas">50</span> <span class="unit">m<sup>2</sup></span>
+          </h2>
+        </div>
+
+        <div class="result-card card-keliling">
+          <span class="result-title">Keliling (2 × (p + l))</span>
+          <h2 class="result-value">
+            <span id="keliling">30</span> <span class="unit">m</span>
+          </h2>
+        </div>
+      </section>
+
+      <!-- Penjelasan Rumus Matematika -->
+      <footer class="formula-box">
+        <div class="formula-item">
+          <span class="formula-tag">Rumus Luas</span>
+          <code>Luas = panjang × lebar</code>
+        </div>
+        <div class="formula-item">
+          <span class="formula-tag">Rumus Keliling</span>
+          <code>Keliling = 2 × (panjang + lebar)</code>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
